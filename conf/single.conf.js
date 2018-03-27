@@ -1,6 +1,6 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-  key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACC_KEY',
+  user: 'Your_BrowserStackUsername',
+  key: 'Your_BrowserStackKey',
 
   updateJob: false,
   specs: [
@@ -9,9 +9,11 @@ exports.config = {
   exclude: [],
 
   capabilities: [{
-    browser: 'chrome',
-    name: 'single_test',
-    build: 'webdriver-browserstack'
+    'browser': 'safari',
+     'device': 'iPhone 8',
+     'realMobile': 'true',
+     'os_version': '11.2',
+      build: 'EBay Login build'
   }],
 
   logLevel: 'verbose',
